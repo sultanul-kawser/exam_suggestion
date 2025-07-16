@@ -25,16 +25,25 @@ int main()
             cin >> mat2[i][j];
         }
     }
-
+    int multi[row1][col2];
     if(col1 == row2){
         for(auto i = 0; i < row1; i++){
             
             for(auto j = 0; j < col2; j++){
-                int sum = 0; 
-               for(auto k = 0; k < row2; k++){
-                sum += (mat2[k][j] * mat1[i][j]);
+                 int sum = 0;
+               for(auto k = 0; k < col1; k++){
+                
+                sum += (mat1[i][k] * mat2[k][j]);
+                
                }
-               cout << sum << " ";
+               multi[i][j] = sum;
+               
+            }
+        }
+        cout << "multiplication of both matrix is :\n";
+        for(auto i = 0; i < row1; i++){
+            for(auto j = 0; j < col2; j++){
+                cout << multi[i][j] << " ";
             }cout << "\n";
         }
     }else{
