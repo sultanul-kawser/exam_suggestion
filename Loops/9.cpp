@@ -12,7 +12,7 @@ int main()
         reverseNum = (reverseNum * 10) + rem;
         n /= 10;
     }
-    cout << reverseNum << "\n";
+    
     if(originalNum == reverseNum){
         cout << "The integer is a palindrome.";
     }else{
